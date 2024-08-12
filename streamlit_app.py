@@ -13,5 +13,7 @@ st.write("This app generates a product description based on the product name and
 product_name = st.text_input("Enter product name:")
 keywords = st.text_input("Enter keywords (seperated by a comma):")
 
-response = model.generate_content(f"Write about {product_name} and use keywords {keywords}")
+response = model.generate_content(f"Write about {product_name} and use keywords: {keywords}, also use emojis")
 print(response.text)
+
+st.write(response.text)
