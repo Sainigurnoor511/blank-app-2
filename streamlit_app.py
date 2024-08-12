@@ -8,7 +8,7 @@ st.write("This app generates a product description based on the product name and
 # Set the API key from an environment variable
 
 api_key = st.text_input("Enter your API key:")
-genai.configure(api_key)
+genai.configure(api_key=api_key)
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 product_name = st.text_input("Enter product name:")
