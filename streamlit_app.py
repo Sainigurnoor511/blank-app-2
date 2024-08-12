@@ -15,4 +15,7 @@ keywords = st.text_input("Enter keywords (seperated by a comma):")
 
 response = model.generate_content(f"Write about {product_name} and use keywords: {keywords}, also use emojis")
 
-st.write(response.text)
+if st.button("Generate"):
+    st.write(response.text)
+else:
+    st.write("Click the button to generate the product description.")
